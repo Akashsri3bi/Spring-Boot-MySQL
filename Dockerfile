@@ -5,6 +5,6 @@ RUN mvn clean package -DskipTests
 
 # Stage 2: Run
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build target/World-0.0.1-SNAPSHOT.jar World.jar
+COPY --from=build target/demo-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","World.jar"]
